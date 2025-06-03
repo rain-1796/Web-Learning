@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>外边距-塌陷问题</title>
+  <style>
+    /* 子级直接设置 margin-top ,父级会向下塌陷 */
+    /* 如果子元素的 margin-top 未被父元素的边界（如边框、内边距）隔离，它仍然会影响父元素在文档流中的位置。 */
+    .father {
+      width: 300px;
+      height: 300px;
+      /* padding-top: 1px; 新增 */
+      background-color: pink;
+      
+      /* 取消子级外边距margin，直接给父级加内边距padding */
+      /* padding-top: 50px;
+      box-sizing: border-box; */
+
+      /* 溢出隐藏 */
+      /* 父级设置 */
+      overflow: hidden;
+
+      /* border-top: 1px solid #000; */
+    }
+
+    .son {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+
+      margin-top: 50px;
+      /* margin-right: 20px; */
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son">son</div>
+  </div>
+</body>
+</html>

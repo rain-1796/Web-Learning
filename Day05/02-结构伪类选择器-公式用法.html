@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器-公式用法</title>
+    <style>
+        /* 偶数标签 */
+        li:nth-child(4n) {
+            background-color: green;
+        }
+        /* 奇数标签 */
+        li:nth-child(2n+1) {
+            background-color: red;
+        }
+        /* 5n 表示5的倍数的标签 */
+        /* n+5 表示第5个之前的标签 */
+        /* -n+5 表示第5个之前的标签 */
+    </style>
+</head>
+<body>
+    <li>li 1</li>
+        <li>li 2</li>
+        <li>li 3</li>
+        <li>li 4</li>
+        <li>li 5</li>
+        <li>li 6</li>
+        <li>li 7</li>
+        <li>li 8</li>
+        <li>li 9</li>
+        <li>li 10</li>
+</body>
+</html>

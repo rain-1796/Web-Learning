@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+        <tr> 
+            <!-- 表头 th -->
+            <th>姓名</th>
+            <th>语文</th>
+            <th>数学</th>
+            <th>总分</th>
+        </tr>
+        </thead>
+        <!-- 使用跨行合并rowspan时，要确保对应的行同属一个tbody标签下 -->
+        <tbody>
+        <tr>
+            <!-- 内容单元格 td -->
+            <td>张三</td>
+            <td>99</td>
+            <td rowspan="2">100</td>
+            <td>199</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>98</td>
+            <!-- <td>100</td> -->
+            <td>198</td>
+        </tr>
+        </tbody>
+        <!-- 跨列合并colspan   -->
+        <tfoot>
+        <tr>
+            <td>评价</td>
+            <td colspan="3">优秀</td>
+            <!-- <td>优秀</td>
+            <td>优秀</td> -->
+        </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
