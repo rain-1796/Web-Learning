@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>透视效果</title>
+  <style>
+    /* 视距属性必须添加给 直接父级 */
+    .father {
+      /* 取值范围建议800px-1200px */
+      perspective: 1000px;
+      /* perspective: 10000px;
+      perspective: 100px; */
+    }
+
+    .son {
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      background-color: pink;
+      transition: all 0.5s;
+    }
+
+    .son:hover{
+      /* 远离-变小 */
+      transform: translateZ(-300px);
+      /* 靠近-变大 */
+      transform: translateZ(300px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+
+</html>
